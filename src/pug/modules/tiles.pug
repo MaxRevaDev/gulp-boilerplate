@@ -1,0 +1,12 @@
+- var tiles = [{title: 'Totem IDOL', text: 'Новая конструкция, оптимальная цена'}, {title: 'Totem EVO', text: 'Новая конструкция, оптимальная цена'}, {title: 'Totem TUBE', text: 'Новая конструкция, оптимальная цена'}, {title: 'Totem MONOLIT', text: 'Новая конструкция, оптимальная цена'}]
+
+.container.tile-list
+  for item in tiles
+    .tile
+      .tile__image.img-responsive
+        img(src="http://via.placeholder.com/253x326" alt="")
+      .tile__content
+        h3.tile__title=item.title
+        p.tile__paragraph=item.text
+        div
+          a(href="#").button.white Подробнее

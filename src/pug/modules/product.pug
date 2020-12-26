@@ -1,0 +1,45 @@
+- var images = ['one', 'two', 'three', 'four']
+- var options = ['color1','color2','color3','color4','color5','color6','color7','color8','color9','color10','color11','color12','color13','color14','color15']
+- var equipment = ['Шахта','Мундштук','Блюдце','Силиконовый шланг Soft Touch','Комплект уплотнителей','Фирменная упаковка']
+
+.container.product
+  .product__left
+    .product__thumbnails
+      .slider-nav-thumbnails.img-responsive
+        for item in images
+          div
+            img(src="http://via.placeholder.com/130x130" alt=item)
+    .product__photo
+      .photo-slider.img-responsive
+        for item in images
+          figure
+            img(src="http://via.placeholder.com/400x560" alt=item)
+
+  .product__right
+    h1.product__title Totem Elixir
+    .product__price 3 370 грн
+    .product__options
+      .product__options-label Выберете цвет:
+      ul.product__options-list
+        for item in options
+          li.product__options-item
+            input(type="radio" id=item name="color" value=item)
+            label(for=item)
+
+    .product__counter-container
+      .product__counter
+        .product__counter-label Кол-во:
+        .counter
+          button.counter__button.down
+            //include ../../images/minus.svg
+          input.counter__value(type="text" placeholder="" value='0')
+          button.counter__button.up
+            //include ../../images/plus.svg
+      a(href="#").button.white.large Добавить в корзину
+
+    .product__separator
+
+    .product__list-title КОМПЛЕКТАЦИЯ
+    ul.product__list
+      for item in equipment
+        li.product__list-item=item

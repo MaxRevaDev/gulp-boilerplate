@@ -1,0 +1,32 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-top: rem(20);
+  margin-bottom: rem(48);
+
+  &__item {
+    margin-right: rem(6);
+    opacity: 0.5;
+
+    &:last-child {
+      opacity: 1;
+
+      .breadcrumbs__link::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: normal;
+    font-size: rem(12);
+    color: #fff;
+    position: relative;
+
+    &::after {
+      content: '/';
+      font-size: rem(12);
+      margin-left: rem(8);
+    }
+  }
+}

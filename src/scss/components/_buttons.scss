@@ -1,0 +1,51 @@
+.button {
+  border: none;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  padding-left: rem(24);
+  padding-right: rem(24);
+  border-radius: 2px;
+  height: rem(40);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: rem(16);
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+  &.white {
+    border: 1px solid #fff;
+    background: #fff;
+    font-size: rem(12);
+    line-height: rem(15);
+    color: #020103;
+  }
+
+  &.outline {
+    height: rem(48);
+    border: 1px solid #1E222C;
+    background: transparent;
+    font-weight: 300;
+    font-size: rem(18);
+    line-height: rem(22);
+    color: #fff;
+  }
+
+  &.large {
+    font-size: rem(14);
+    text-transform: none;
+    height: rem(57);
+    padding-left: rem(50);
+    padding-right: rem(50);
+  }
+}
